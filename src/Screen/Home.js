@@ -17,15 +17,24 @@ const { width, height } = Dimensions.get("window");
 
 export default function Home() {
   const [date, setDate] = useState(null);
+
+  
+
+  const [showBalance, setShowBalance] = useState(false);
+
+  // const todaysDate= new Date().getFullYear()
+  // console.log(todaysDate);
+
   useEffect(() => {
     let today = new Date();
-    let date =
+    let myDerivedDate =
       today.getFullYear() +
       "-" +
       (today.getMonth() + 1) +
       "-" +
       today.getDate();
-    setDate(date);
+    console.log(myDerivedDate);
+    setDate(myDerivedDate);
   }, []);
 
   const renderItem = ({ item }) => (
@@ -41,7 +50,7 @@ export default function Home() {
   return (
     <View style={{}}>
       <View style={Styles.v1}>
-        <View>
+        <View style={{left:15}}>
           <Text>Welcome back</Text>
           <Text>Idowu Ibukun Femi</Text>
         </View>
@@ -59,7 +68,7 @@ export default function Home() {
             <View>
               <View style={Styles.v31}>
                 <View style={{ flexDirection: "row" }}>
-                  <View style={{ flexDirection: "column" }}>
+                  <View>
                     <Text
                       style={{
                         color: "#ffff",
@@ -67,7 +76,7 @@ export default function Home() {
                         fontSize: 15,
                       }}
                     >
-                      Balance{" "}
+                      Balance 
                     </Text>
                     <Text style={{ color: "#ffff", fontWeight: "bold" }}>
                       {"Today"} - {date}
@@ -83,17 +92,19 @@ export default function Home() {
                     fontWeight: "bold",
                   }}
                 >
-                  #400,000,000.567
+                  {showBalance == true ? "N200,000" : "xxxxxxx"}
                 </Text>
                 <Text style={{ color: "#fff", alignSelf: "center", top: 15 }}>
                   up by 2% from last month
                 </Text>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => setShowBalance((prev) => !prev)}
+                >
                   <Icon
                     // onPress={() => navigation.navigate("Details")}
                     name="plus"
                     size={34}
-                    color="#4169E1"
+                    color="green"
                     style={{
                       alignSelf: "center",
                       top: 50,
@@ -127,7 +138,7 @@ export default function Home() {
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id}
                 ItemSeparatorComponent={() => (
-                  <View style={{ height: 12, backgroundColor: "red", width }} />
+                  <View style={{ height: 1, backgroundColor: "green",  width:width*0.90 ,alignSelf:"center"  }} />
                 )}
                 ListHeaderComponent={
                   <View>
@@ -205,7 +216,7 @@ const Styles = StyleSheet.create({
     // top: 50,
     paddingTop: 20,
     flexDirection: "row",
-    backgroundColor: "cyan",
+    backgroundColor: "",
     justifyContent: "space-between",
     alignItems: "flex-end",
   },
@@ -222,18 +233,18 @@ const Styles = StyleSheet.create({
     padding: 10,
     top: 30,
     height: 200,
-    width: 310,
-    backgroundColor: "#4169E1",
+    width:width*0.85,
+    backgroundColor: "green",
     borderRadius: 20,
     alignSelf: "center",
   },
 
   v311: {
     padding: 10,
-    // top: 30,
+    top:10,
     height: 200,
-    width: 310,
-    backgroundColor: "blue",
+    width:width*0.85,
+    backgroundColor: "green",
     borderRadius: 20,
     alignSelf: "center",
   },
@@ -245,6 +256,6 @@ const Styles = StyleSheet.create({
   imag2: {
     height: 70,
     width: 70,
-    backgroundColor: "red",
+  
   },
 });

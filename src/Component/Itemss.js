@@ -36,7 +36,7 @@ const Item = ({ title, title1,title2,icon }) => (
       title1: {
         fontSize: 20,
         fontWeight:"bold",
-        color:"blue"
+        color:"green"
         
       },
       title2: {

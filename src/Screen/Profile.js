@@ -19,10 +19,10 @@ export default function Profile () {
     
             <View style={{flex:1}}>
 
-           <View style={{top:120}}>
+           <View style={{top:50}}>
             <Image style={Styles.imag1} source={require("../../assets/MaskGroup.png")}/>
            </View>
-           <View style={{top:100,paddingTop:10,paddingBottom:190}}>
+           <View style={{top:50,paddingTop:10,paddingBottom:190}}>
            <FlatList
             data={DATA}
             renderItem={renderItem}
