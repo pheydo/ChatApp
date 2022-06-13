@@ -14,9 +14,9 @@ export default function MyTabs() {
   return (
     <Tab.Navigator
     initialRouteName="HomeScreen"
-    activeColor="white"
+    activeColor="green"
     style={{ backgroundColor: 'green' }}
-    barStyle={{ backgroundColor: 'green' }}
+    barStyle={{ backgroundColor: 'white' }}
   
     >
       <Tab.Screen
@@ -25,7 +25,7 @@ export default function MyTabs() {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home" color={'white'} size={26} />
+            <MaterialCommunityIcons name="home" color={color} size={26} />
           ),
         }}
       />

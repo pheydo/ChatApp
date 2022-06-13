@@ -3,7 +3,7 @@ import { Text, View ,StyleSheet,Image, TouchableOpacity,Icon} from 'react-native
 
 
 
-const Item = ({ title, title1,title2,icon }) => (
+const Item = ({ title, title1,title2,}) => (
     <TouchableOpacity style={Styles.item}>
          
          <View  style={{flexDirection:"column", left:5,}}>

@@ -1068,6 +1068,11 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/alex-brush/-/alex-brush-0.2.2.tgz#5ff6270f772fcc1469fd15a9805ee8848ef23892"
   integrity sha512-U4PXF4Uji4pIk0Z++wyqPAV1nrkdvTRCsI2fx1gXkwJ40/jJSyuhdQMyFKQm1z/4ZWuT9aKi3s9bamPukIvQ9A==
 
+"@expo-google-fonts/cabin@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/cabin/-/cabin-0.2.2.tgz#eebf5c737956c6c746307624ae58f40e49da2a23"
+  integrity sha512-M/dh243BiQZ0XdQrDW3YQ3Qrb+hz+tYEn3RZgXwucXtSGpWF9ypk8SEoyPN/cVgG+z2vKqac8MkgR5G0gyEm/A==
+
 "@expo-google-fonts/inter@^0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/inter/-/inter-0.2.2.tgz#bd5624be6c92e7621aa9ddb5bd72757604729121"

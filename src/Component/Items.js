@@ -7,7 +7,8 @@ import {
   TouchableOpacity,
   Dimensions,
 } from "react-native";
-import { useFonts, Inter_900Black } from "@expo-google-fonts/inter";
+import { useFonts, Inter_900Black 
+} from "@expo-google-fonts/inter";
 
 const { width, height } = Dimensions.get("window");
 

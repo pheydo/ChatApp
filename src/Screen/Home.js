@@ -7,23 +7,33 @@ import {
   FlatList,
   TouchableOpacity,
   Dimensions,
+ 
 } from "react-native";
 import Swiper from "react-native-swiper";
 import Item from "../../src/Component/Items";
 import Icon from "@expo/vector-icons/Entypo";
 import { DATA } from "../../src/Component/Constdata";
 
+
+
+
+
+
+
+
 const { width, height } = Dimensions.get("window");
 
 export default function Home() {
   const [date, setDate] = useState(null);
 
-  
 
   const [showBalance, setShowBalance] = useState(false);
 
-  // const todaysDate= new Date().getFullYear()
-  // console.log(todaysDate);
+  
+
+
+ 
+
 
   useEffect(() => {
     let today = new Date();
@@ -64,7 +74,7 @@ export default function Home() {
 
       <View style={Styles.v3}>
         <Swiper loop={false}>
-          <View style={{ height: 700 }}>
+          <View >
             <View>
               <View style={Styles.v31}>
                 <View style={{ flexDirection: "row" }}>
@@ -92,7 +102,7 @@ export default function Home() {
                     fontWeight: "bold",
                   }}
                 >
-                  {showBalance == true ? "N200,000" : "xxxxxxx"}
+                  {showBalance == true ? "N200,000,000" : "xxxxxxx"}
                 </Text>
                 <Text style={{ color: "#fff", alignSelf: "center", top: 15 }}>
                   up by 2% from last month
@@ -116,17 +126,23 @@ export default function Home() {
               </View>
             </View>
 
-            <View style={{ height: 340, top: 60 }}>
-              <View style={{ flexDirection: "row" }}>
-                <Text> Recent Transaction</Text>
+            <View>
+              <View style={{ flexDirection: "row",marginTop:10,marginBottom:10, marginLeft:10, justifyContent:"space-between",width:"90%" }}>
+                <Text > Recent Transaction</Text>
                 <Text> see all</Text>
               </View>
-              <FlatList
+            </View>
+             <FlatList
                 data={DATA}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id}
+                ItemSeparatorComponent={() => (
+                  <View style={{ height: 1, backgroundColor: "green",  width:width*0.90 ,alignSelf:"center"  }} />
+                )}
+                ListFooterComponent={<View style={{ marginTop: 480 }} />}
               />
-            </View>
+
+
           </View>
 
           <View>
@@ -196,7 +212,7 @@ export default function Home() {
                     </View>
                   </View>
                 }
-                ListFooterComponent={<View style={{ marginTop: 350 }} />}
+                ListFooterComponent={<View style={{ marginTop: 180 }} />}
               />
             </View>
           </View>
@@ -231,7 +247,7 @@ const Styles = StyleSheet.create({
 
   v31: {
     padding: 10,
-    top: 30,
+    marginTop:10,
     height: 200,
     width:width*0.85,
     backgroundColor: "green",
@@ -241,7 +257,7 @@ const Styles = StyleSheet.create({
 
   v311: {
     padding: 10,
-    top:10,
+    marginTop:10,
     height: 200,
     width:width*0.85,
     backgroundColor: "green",
