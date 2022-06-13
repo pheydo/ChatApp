@@ -5,7 +5,6 @@ import Home from '../../src/Screen/Home';
 import Profile from '../../src/Screen/Profile';
 import Service from '../../src/Screen/Service';
 import Notification from '../../src/Screen/Notification';
-import MyStack from './Navigation';
 
 
 

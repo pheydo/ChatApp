@@ -42,7 +42,6 @@ const Item = ({ title, title1, title2, title3, image }) => {
 
 const Styles = StyleSheet.create({
   item: {
-    // overflow:"hidden",
     shadowColor: "black",
     shadowOffset: { width: 0, height: 3 },
     shadowRadius: 6,
