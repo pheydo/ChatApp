@@ -7,8 +7,7 @@ import {
   TouchableOpacity,
   Dimensions,
 } from "react-native";
-import { useFonts, Inter_900Black 
-} from "@expo-google-fonts/inter";
+import { useFonts, Inter_900Black } from "@expo-google-fonts/inter";
 
 const { width, height } = Dimensions.get("window");
 
@@ -16,7 +15,6 @@ const Item = ({ title, title1, title2, title3, image }) => {
   let [fontsLoaded] = useFonts({
     Inter_900Black,
   });
-
 
   if (!fontsLoaded) {
     return <Text>Loading</Text>;
@@ -53,20 +51,18 @@ const Styles = StyleSheet.create({
     padding: 10,
     height: 65,
     marginVertical: 2,
-    marginHorizontal:16,
+    marginHorizontal: 16,
     borderRadius: 13,
     width: width * 0.96,
     alignSelf: "center",
   },
   title1: {
     fontSize: 15,
-    fontWeight: 'bold'
+    fontWeight: "bold",
   },
   title2: {
     fontSize: 12,
     padding: 5,
-    
-
   },
 
   title3: {

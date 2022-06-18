@@ -23,7 +23,7 @@ import { DATA } from "../../src/Component/Constdata";
 
 const { width, height } = Dimensions.get("window");
 
-export default function Home() {
+export default function Home({navigation}) {
   const [date, setDate] = useState(null);
 
 
@@ -111,7 +111,7 @@ export default function Home() {
                   onPress={() => setShowBalance((prev) => !prev)}
                 >
                   <Icon
-                    // onPress={() => navigation.navigate("Details")}
+                   
                     name="plus"
                     size={34}
                     color="green"
@@ -137,7 +137,7 @@ export default function Home() {
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id}
                 ItemSeparatorComponent={() => (
-                  <View style={{ height: 1, backgroundColor: "green",  width:width*0.90 ,alignSelf:"center"  }} />
+                  <View style={{ height: 1,   width:width*0.90 ,alignSelf:"center"  }} />
                 )}
                 ListFooterComponent={<View style={{ marginTop: 480 }} />}
               />
@@ -193,7 +193,7 @@ export default function Home() {
                       </Text>
                       <TouchableOpacity>
                         <Icon
-                          // onPress={() => navigation.navigate("Details")}
+                         
                           name="plus"
                           size={34}
                           color="#4169E1"

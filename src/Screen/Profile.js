@@ -1,7 +1,4 @@
-
-
 import Item from '../../src/Component/Itemss';
-
 import {DATA} from '../../src/Component/Profiledata';
 import { Text, View ,StyleSheet, FlatList,Image} from 'react-native';
 
@@ -9,8 +6,7 @@ import { Text, View ,StyleSheet, FlatList,Image} from 'react-native';
 
 export default function Profile () {
 
-        
-    const renderItem = ({ item }) => (
+  const renderItem = ({ item }) => (
         <Item   icon={item.icon} title1={item.title1} title2={item.title2} title3={item.title3} title={item.title} />
       );
   
@@ -29,11 +25,7 @@ export default function Profile () {
             keyExtractor={item => item.id}
           />
            </View>
-           
-            
-            
-         
-          </View>
+        </View>
          
     
         );
