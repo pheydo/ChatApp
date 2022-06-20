@@ -60,11 +60,13 @@ const Styles = StyleSheet.create({
   },
   title1: {
     fontSize: 15,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    color:"green"
   },
   title2: {
     fontSize: 12,
     padding: 5,
+    color:"green"
     
 
   },

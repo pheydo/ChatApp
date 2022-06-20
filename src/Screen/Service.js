@@ -84,6 +84,7 @@ const Styles = StyleSheet.create({
     alignSelf: "center",
     marginTop: 60,
     fontSize: 19,
+    color:"white"
   },
   v2: {
     marginTop: 50,
@@ -101,5 +102,5 @@ const Styles = StyleSheet.create({
     // backgroundColor: "red",
     marginLeft: 10,
   },
-  // text1: { height: height * 0.15, backgroundColor: "red" },
+  text1: { height: height * 0.15, backgroundColor: "green" },
 });

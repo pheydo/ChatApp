@@ -61,8 +61,8 @@ export default function Home({navigation}) {
     <View style={{}}>
       <View style={Styles.v1}>
         <View style={{left:15}}>
-          <Text>Welcome back</Text>
-          <Text>Idowu Ibukun Femi</Text>
+          <Text style={Styles.t1}>Welcome back</Text>
+          <Text style={Styles.t1}>Idowu Ibukun Femi</Text>
         </View>
         {/* <Image style={Styles.imag1} source={require("../../assets/Group5.png")}/> */}
         <Image
@@ -191,7 +191,10 @@ export default function Home({navigation}) {
                       >
                         up by 2% from last month
                       </Text>
-                      <TouchableOpacity>
+                      <TouchableOpacity
+                       onPress={() => navigation.navigate("Welcomepage")}
+                      
+                      >
                         <Icon
                          
                           name="plus"
@@ -229,7 +232,7 @@ export default function Home({navigation}) {
 
 const Styles = StyleSheet.create({
   v1: {
-    // top: 50,
+    top: 4,
     paddingTop: 20,
     flexDirection: "row",
     backgroundColor: "",
@@ -247,7 +250,7 @@ const Styles = StyleSheet.create({
 
   v31: {
     padding: 10,
-    marginTop:10,
+    marginTop:25,
     height: 200,
     width:width*0.85,
     backgroundColor: "green",
@@ -274,4 +277,8 @@ const Styles = StyleSheet.create({
     width: 70,
   
   },
+  t1:{
+      color:"green",
+      fontSize:15
+  }
 });

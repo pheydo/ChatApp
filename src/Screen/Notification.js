@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View ,StyleSheet} from 'react-native';
+import { Text, View ,StyleSheet,FlatList} from 'react-native';
 import { DATA } from "../../src/Component/HistoryData";
 import Item from "../../src/Component/HistoryItem";
 
@@ -22,16 +22,18 @@ export default function Notification() {
       <View style={Styles.v1}>
         <Text>Home</Text>
 
-
-        <FlatList
+           <View style={Styles.v2}>
+           <FlatList
                 data={DATA}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id}
-                ItemSeparatorComponent={() => (
-                  <View style={{ height: 1,   width:width*0.90 ,alignSelf:"center"  }} />
-                )}
+                // ItemSeparatorComponent={() => (
+                //   <View style={{ height: 1,   width:width*0.90 ,alignSelf:"center"  }} />
+                // )}
                 ListFooterComponent={<View style={{ marginTop: 480 }} />}
               />
+           </View>
+      
       </View>
     );
   }
@@ -40,9 +42,12 @@ const Styles=StyleSheet.create({
 
 v1:{
     flex:1,
-backgroundColor:"red",
      flexdirection: "row", 
-}
+},
+v2:{
+  marginTop:70,
 
+
+}
 
 })

@@ -57,4 +57,40 @@ export const DATA = [
     title: "#20,000.00",
     title3: "12-11-2022",
   },
+
+
+  {
+    id: "341",
+    image: require("../../assets/Group5.png"),
+    title1: "trans ID2345",
+    title2: "House rent",
+    title: "#20,000.00",
+    title3: "12-11-2022",
+  },
+  {
+    id: "5864",
+    image: require("../../assets/Group5.png"),
+    title1: "trans ID234",
+    title2: "House rent",
+    title: "#20,000.00",
+    title3: "12-11-2022",
+  },
+
+  {
+    id: "58696",
+    image: require("../../assets/Group5.png"),
+    title1: "trans ID234",
+    title2: "House rent",
+    title: "#20,000.00",
+    title3: "12-11-2022",
+  },
+
+  {
+    id: "586914",
+    image: require("../../assets/Group5.png"),
+    title1: "trans ID234",
+    title2: "House rent",
+    title: "#20,000.00",
+    title3: "12-11-2022",
+  },
 ];
