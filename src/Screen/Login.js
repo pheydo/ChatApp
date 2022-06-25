@@ -8,16 +8,14 @@ import {
   TouchableOpacity
  
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+
 
 const { width, height } = Dimensions.get("window");
 
 export default function TransactionDetail({navigation}) {
     const [text, onChangeText] = React.useState(null);
-    const [number, onChangeNumber] = React.useState(null);
     const [text1, onChangeText1] = React.useState(null);
-    const [text2, onChangeText2] = React.useState(null);
-
+    
   return (
     <View >
         <View style={Styles.v1}>

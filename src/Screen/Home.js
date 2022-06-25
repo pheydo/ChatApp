@@ -102,7 +102,7 @@ export default function Home({navigation}) {
                     fontWeight: "bold",
                   }}
                 >
-                  {showBalance == true ? "N200,000,000" : "xxxxxxx"}
+                  {showBalance == true ? "N500,000,000" : "xxxxxxx"}
                 </Text>
                 <Text style={{ color: "#fff", alignSelf: "center", top: 15 }}>
                   up by 2% from last month

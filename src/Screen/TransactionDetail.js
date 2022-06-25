@@ -20,6 +20,7 @@ export default function TransactionDetail() {
 
   return (
     <View >
+      
         <View style={Styles.v1}>
           <Text style={Styles.t1}>Direct Pay$..</Text>
         </View>
